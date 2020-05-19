@@ -90,23 +90,21 @@ body {
       height: 20px;
     }
   }
-}
-
-.toggle input[type='checkbox'] {
-  display: none;
-}
-
-// .toggle input[type='checkbox']:checked ~ label {
-//   background-color: #141518;
-//   border-color: #0f1013;
-//   background-color: #131622;
-//   border-color: #141518;
-// }
-
-.toggle input[type='checkbox']:checked ~ label::after {
-  // background-color: #1e1e25;
-  background-color: #7788d4;
-  transform: translateX(28px);
+  input[type='checkbox'] {
+    display: none;
+  }
+  // Changes background colors of the toggle in dark-mode
+  // input[type='checkbox']:checked ~ label {
+  //   background-color: #141518;
+  //   border-color: #0f1013;
+  //   background-color: #131622;
+  //   border-color: #141518;
+  // }
+  input[type='checkbox']:checked ~ label::after {
+    // background-color: #1e1e25;
+    background-color: #7788d4;
+    transform: translateX(28px);
+  }
 }
 
 // NAVMENU
