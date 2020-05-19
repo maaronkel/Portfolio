@@ -51,12 +51,22 @@ body {
   width: 100vw;
   position: relative;
   grid-area: header;
+  &__menu {
+    background-color: rgb(16, 19, 26);
+    position: fixed;
+    width: 100vw;
+    height: 6rem;
+    // height: 7.1rem;
+    z-index: 30;
+  }
 }
 
 // LIGHT / DARK TOGGLE
 .toggle {
   position: absolute;
-  top: 3.5rem;
+  // top: 2.4rem;
+  top: 1.8rem;
+  // top: 3.5rem;
   right: 9rem;
   // left: 3rem;
   label {
@@ -117,8 +127,11 @@ body {
 		height: 5rem;
 		width: 5rem;
 		position: fixed;
-		top: 2rem;
-		right: 2rem;
+		// top: 2rem;
+    // right: 2rem;
+    right: 1rem;
+		top: 0.5rem;
+		// top: 1rem;
     border-radius: 50%;
 		z-index: 2000;
 		// box-shadow: 0 1rem 3rem rgba(black, 0.6);
@@ -130,8 +143,10 @@ body {
 		width: 4rem;
 		border-radius: 50%;
     position: fixed;
-    top: 2.5rem;
-		right: 2.5rem;
+    // top: 2.5rem;
+    // top: 1.8rem;
+    top: 1.4rem;
+		right: 1.5rem;
 		background-image: radial-gradient(
       rgb(16, 19, 26),
 			rgb(82, 82, 117)
@@ -195,7 +210,7 @@ body {
 			transform: translateX(0.5rem);
 		}
   }
-	//functionality
+	// Functionality
 	&__checkbox:checked ~ &__background {
     transform: scale(80);
     // overflow-y: hidden;
@@ -206,7 +221,7 @@ body {
 		width: 100%;
   }
 
-	//icon
+	// Icon
 	&__icon {
 		position: relative;
 		margin-top: 2.4rem;
@@ -266,8 +281,8 @@ body {
 // DEFAULT TITLE STYLES
 .title {
   position: absolute;
-  bottom: 2.6rem;
-  left: 3rem;
+  bottom: 2rem;
+  left: 2.3rem;
   width: 80%;
   color: rgb(242, 243, 255);
   &__main {
@@ -287,12 +302,15 @@ body {
 // index.html LINK
 .home {
   position: absolute;
-  top: 3.5rem;
+  top: 1.8rem;
+  // top: 2.4rem;
+  // top: 3.5rem;
   // right: 9rem;
-  left: 3rem;
+  left: 2.4rem;
   a {
     text-decoration: none;
     font-size: 1.6rem;
+    font-weight: 700;
     color: white;
     &:hover {
       color: rgb(199, 208, 226);
@@ -335,7 +353,7 @@ body {
   .title {
     // override title positioning for contact page
     position: absolute;
-    top: 12rem;
+    top: 7.6rem;
   }
   h1 {
     color: rgb(55, 63, 83);
@@ -368,10 +386,12 @@ body {
   &__email {
     a {
       font-size: 1.6rem;
-      font-weight: 600;
+      font-weight: 700;
       // text-decoration: none;
       color: rgb(0, 0, 0);
       transition: all ease-in-out 0.3s;
+      text-underline-position: under;
+      text-decoration: underline;
       &:hover {
         color: rgb(255, 166, 64);
       }
@@ -408,12 +428,12 @@ body {
   // grid-template-areas: 
   // "post";
   // height: 100%;
-  margin: 3rem;
+  margin: 2.4rem;
   a {
     text-decoration: none;
     border-bottom: 1px solid rgb(186, 186, 206);
     color: rgb(22, 25, 32);
-    padding-bottom: 2.3rem;
+    padding-bottom: 2.2rem;
     .blog__item {
       display: grid;
       // grid-template-columns: repeat(3, 1fr);
@@ -453,7 +473,7 @@ body {
   // grid-template-areas: 
   // "project";
   // height: 100%;
-  margin: 3rem;
+  margin: 2.4rem;
   // overflow-y: scroll;
   &__item {
     display: grid;
@@ -551,10 +571,6 @@ body {
   }
 }
 
-// .navigation input:checked ~ .navigation__list { 
-//     display: block;
-//   }
-
 // DARK THEME
 body.dark-theme {
 	background: #141518;
@@ -583,6 +599,7 @@ body.dark-theme {
   }
 
   .header,
+  .header__menu,
   .footer,
   .navigation__button {
     background-color: rgb(0, 0, 0);
@@ -590,32 +607,15 @@ body.dark-theme {
 
   .contact__social {
     &--logos {
-      margin-top: 3rem;
       &--icon {
         color: rgb(124, 124, 145);
-        font-size: 4rem;
-        margin: 0 1rem 0 0;
-        transition: all ease-in-out 0.3s;
-        &:hover {
-          color: rgb(255, 166, 64);
-        }
-      }
-      a {
-        text-decoration: none;
       }
     }
   }
   
   .contact__email {
     a {
-      font-size: 1.6rem;
-      font-weight: 600;
-      // text-decoration: none;
       color: rgb(228, 228, 228);
-      transition: all ease-in-out 0.3s;
-      &:hover {
-        color: rgb(255, 166, 64);
-      }
     }
   } 
   

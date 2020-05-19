@@ -45,9 +45,17 @@ body {
   grid-area: header;
 }
 
+.header__menu {
+  background-color: #10131a;
+  position: fixed;
+  width: 100vw;
+  height: 6rem;
+  z-index: 30;
+}
+
 .toggle {
   position: absolute;
-  top: 3.5rem;
+  top: 1.8rem;
   right: 9rem;
 }
 
@@ -97,8 +105,8 @@ body {
   height: 5rem;
   width: 5rem;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  right: 1rem;
+  top: 0.5rem;
   border-radius: 50%;
   z-index: 2000;
   text-align: center;
@@ -110,8 +118,8 @@ body {
   width: 4rem;
   border-radius: 50%;
   position: fixed;
-  top: 2.5rem;
-  right: 2.5rem;
+  top: 1.4rem;
+  right: 1.5rem;
   background-image: radial-gradient(#10131a, #525275);
   z-index: 1000;
   -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -233,8 +241,8 @@ body {
 
 .title {
   position: absolute;
-  bottom: 2.6rem;
-  left: 3rem;
+  bottom: 2rem;
+  left: 2.3rem;
   width: 80%;
   color: #f2f3ff;
 }
@@ -254,13 +262,14 @@ body {
 
 .home {
   position: absolute;
-  top: 3.5rem;
-  left: 3rem;
+  top: 1.8rem;
+  left: 2.4rem;
 }
 
 .home a {
   text-decoration: none;
   font-size: 1.6rem;
+  font-weight: 700;
   color: white;
 }
 
@@ -312,7 +321,7 @@ body {
 
 .contact .title {
   position: absolute;
-  top: 12rem;
+  top: 7.6rem;
 }
 
 .contact h1 {
@@ -349,10 +358,12 @@ body {
 
 .contact__email a {
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   color: black;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+  text-underline-position: under;
+  text-decoration: underline;
 }
 
 .contact__email a:hover {
@@ -390,14 +401,14 @@ body {
   display: -ms-grid;
   display: grid;
   gap: 3rem;
-  margin: 3rem;
+  margin: 2.4rem;
 }
 
 .blog a {
   text-decoration: none;
   border-bottom: 1px solid #babace;
   color: #161920;
-  padding-bottom: 2.3rem;
+  padding-bottom: 2.2rem;
 }
 
 .blog a .blog__item {
@@ -440,7 +451,7 @@ body {
   gap: 3rem;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  margin: 3rem;
+  margin: 2.4rem;
 }
 
 .projects__item {
@@ -602,41 +613,18 @@ body.dark-theme .projects__item a {
 }
 
 body.dark-theme .header,
+body.dark-theme .header__menu,
 body.dark-theme .footer,
 body.dark-theme .navigation__button {
   background-color: black;
 }
 
-body.dark-theme .contact__social--logos {
-  margin-top: 3rem;
-}
-
 body.dark-theme .contact__social--logos--icon {
   color: #7c7c91;
-  font-size: 4rem;
-  margin: 0 1rem 0 0;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-body.dark-theme .contact__social--logos--icon:hover {
-  color: #ffa640;
-}
-
-body.dark-theme .contact__social--logos a {
-  text-decoration: none;
 }
 
 body.dark-theme .contact__email a {
-  font-size: 1.6rem;
-  font-weight: 600;
   color: #e4e4e4;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-body.dark-theme .contact__email a:hover {
-  color: #ffa640;
 }
 
 body.dark-theme .navigation__background {
