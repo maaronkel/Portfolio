@@ -85,6 +85,7 @@ body {
       display: inline-block;
       position: absolute;
       transition: all ease-in-out 0.3s;
+      left: 0.1rem;
       width: 20px;
       height: 20px;
     }
@@ -105,7 +106,7 @@ body {
 .toggle input[type='checkbox']:checked ~ label::after {
   // background-color: #1e1e25;
   background-color: #7788d4;
-  transform: translateX(30px);
+  transform: translateX(28px);
 }
 
 // NAVMENU
@@ -267,19 +268,21 @@ body {
 // DEFAULT TITLE STYLES
 .title {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2.6rem;
   left: 3rem;
   width: 80%;
   color: rgb(242, 243, 255);
   &__main {
-    font-size: 4.3rem;
+    font-size: 4.2rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
+    // line-height: 8rem;
   }
   &__sub {
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
     color: rgb(178, 178, 189);
+    line-height: 2.6rem;
   }
 }
 
@@ -306,16 +309,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
   margin-top: auto;
   span {
     font-size: 1.4rem;
     color: rgb(134, 140, 161);
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
   }
   &__arrow {
     span {
       color: rgb(198, 204, 223);
       font-size: 5rem;
+      margin-top: 1rem;
+      margin-bottom: 9rem;
       &:hover {
         color: rgb(54, 57, 63);
       } 
@@ -546,33 +552,6 @@ body {
     }
   }
 }
-
-
-
-
-
-// .navigation {
-//   label {
-//     display: inline-block; 
-//     color: white;
-//     background: #38364d;
-//     font-style: normal;
-//     font-size: 1.6em;
-//     padding: 10px;
-//   }
-
-//   &__list {
-//     background-color: rgb(236, 188, 188);
-//     display: none;
-//     height: 60vh;
-//     &--item {
-//     box-sizing: border-box;
-//     display: block;
-//     width: 100%;
-//     border-top: 1px solid #333;      
-//     }
-//   }
-// }
 
 // .navigation input:checked ~ .navigation__list { 
 //     display: block;
