@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <title>Matt Kelam</title>
+</head>
+
+<body>
+  <div class="container">
+    <header id="header">
+
+      <div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+      </div>
+
+      <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navigation__toggle">
+        <label for="navigation__toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="./src/about.html" class="navigation__link">About</a></li>
+            <li class="navigation__item"><a href="./src/blog.html" class="navigation__link">Blog</a></li>
+            <li class="navigation__item"><a href="./src/projects.html" class="navigation__link">Projects</a></li>
+            <li class="navigation__item"><a href="index.html#contact" class="navigation__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="title">
+        <h1 class="title__main">Matt Kelam</h1>
+        <span class="title__sub">Software Developer interested in all things health, privacy and
+          code</span>
+      </div>
+
+    </header>
+
+    <div class="scroll">
+      <span>Want to get in touch?</span>
+      <a href="#contact" class="scroll__arrow"><span class="material-icons">keyboard_arrow_down</span></a>
+    </div>
+  </div>
+
+  <section id="contact" class="contact">
+    <div class="title">
+      <h1 class="title__main">Contact</h1>
+      <div class="contact__info contact__social title__sub">
+        <span>You can find me anywhere here:<br></span>
+        <div class="contact__social--logos">
+          <a href="https://www.linkedin.com/in/maaronkel/">
+            <ion-icon name="logo-linkedin" class="contact__social--logos--icon"></ion-icon>
+          </a>
+          <a href="https://github.com/maaronkel">
+            <ion-icon name="logo-twitter" class="contact__social--logos--icon"></ion-icon>
+          </a>
+          <a href="https://twitter.com/maaronkel">
+            <ion-icon name="logo-github" class="contact__social--logos--icon"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__info contact__email title__sub">
+        <span>If you'd like, feel free to </span>
+        <a href="mailto:maaronkel@protonmail.com">email me.</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__list--item"><a href="https://www.linkedin.com/in/maaronkel/">LinkedIn</a></li>
+      <li class="footer__list--item"><a href="https://twitter.com/maaronkel">Twitter</a></li>
+      <li class="footer__list--item"><a href="https://github.com/maaronkel">Github</a></li>
+      <li class="footer__list--item"><a href="#">Matt Kelam 2020 ©</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+
+</html>
