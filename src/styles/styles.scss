@@ -65,9 +65,9 @@ body {
 .toggle {
   position: absolute;
   // top: 2.4rem;
-  top: 1.8rem;
+  top: 18px;
   // top: 3.5rem;
-  right: 7rem;
+  right: 70px;
   // left: 3rem;
   label {
     // background-color: #dfdfdf;
@@ -129,8 +129,8 @@ body {
 		position: fixed;
 		// top: 2rem;
     // right: 2rem;
-    right: 1rem;
-		top: 0.5rem;
+    right: 10px;
+		top: 5px;
 		// top: 1rem;
     border-radius: 50%;
 		z-index: 2000;
@@ -145,8 +145,8 @@ body {
     position: fixed;
     // top: 2.5rem;
     // top: 1.8rem;
-    top: 1.2rem;
-		right: 1.5rem;
+    top: 12px;
+		right: 15px;
 		background-image: radial-gradient(
       rgb(16, 19, 26),
 			rgb(82, 82, 117)
@@ -302,7 +302,7 @@ body {
 // index.html LINK
 .home {
   position: absolute;
-  top: 1.8rem;
+  top: 1.9rem;
   // top: 2.4rem;
   // top: 3.5rem;
   // right: 9rem;
@@ -326,18 +326,18 @@ body {
   align-items: center;
   justify-content: center;
   height: auto;
-  margin-top: auto;
-  span {
+  margin-top: 14rem;
+  p {
     font-size: 1.4rem;
     color: rgb(100, 106, 128);
-    // margin-bottom: 1rem;
+    margin-bottom: 1rem;
   }
   &__arrow {
     span {
       color: rgb(111, 119, 145);
       font-size: 5rem;
-      margin-top: 1rem;
-      margin-bottom: 9rem;
+      // margin-top: 1rem;
+      // margin-bottom: 9rem;
       &:hover {
         color: rgb(54, 57, 63);
       } 
@@ -585,7 +585,8 @@ body.dark-theme {
   }
 
   span,
-  .scroll__arrow span {
+  .scroll__arrow span,
+  .scroll p {
     color: rgb(140, 140, 165);
   }
 
