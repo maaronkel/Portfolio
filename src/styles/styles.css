@@ -56,7 +56,7 @@ body {
 .toggle {
   position: absolute;
   top: 1.8rem;
-  right: 9rem;
+  right: 7rem;
 }
 
 .toggle label {
@@ -118,7 +118,7 @@ body {
   width: 4rem;
   border-radius: 50%;
   position: fixed;
-  top: 1.4rem;
+  top: 1.2rem;
   right: 1.5rem;
   background-image: radial-gradient(#10131a, #525275);
   z-index: 1000;
@@ -300,11 +300,11 @@ body {
 
 .scroll span {
   font-size: 1.4rem;
-  color: #868ca1;
+  color: #646a80;
 }
 
 .scroll__arrow span {
-  color: #c6ccdf;
+  color: #6f7791;
   font-size: 5rem;
   margin-top: 1rem;
   margin-bottom: 9rem;
@@ -578,7 +578,7 @@ body {
 }
 
 .footer__list--item:last-child a {
-  color: #76778d;
+  color: #84849e;
 }
 
 .footer__list--item:last-child a:hover {

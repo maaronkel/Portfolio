@@ -67,7 +67,7 @@ body {
   // top: 2.4rem;
   top: 1.8rem;
   // top: 3.5rem;
-  right: 9rem;
+  right: 7rem;
   // left: 3rem;
   label {
     // background-color: #dfdfdf;
@@ -145,7 +145,7 @@ body {
     position: fixed;
     // top: 2.5rem;
     // top: 1.8rem;
-    top: 1.4rem;
+    top: 1.2rem;
 		right: 1.5rem;
 		background-image: radial-gradient(
       rgb(16, 19, 26),
@@ -329,12 +329,12 @@ body {
   margin-top: auto;
   span {
     font-size: 1.4rem;
-    color: rgb(134, 140, 161);
+    color: rgb(100, 106, 128);
     // margin-bottom: 1rem;
   }
   &__arrow {
     span {
-      color: rgb(198, 204, 223);
+      color: rgb(111, 119, 145);
       font-size: 5rem;
       margin-top: 1rem;
       margin-bottom: 9rem;
@@ -380,6 +380,7 @@ body {
       }
       a {
         text-decoration: none;
+        // content: ' ';
       }
     }
   }
@@ -561,7 +562,8 @@ body {
       }
       &:last-child {
         a {
-        color: rgb(118, 119, 141);
+        color: rgb(132, 132, 158);
+        // color: rgb(118, 119, 141);
           &:hover {
             color: rgb(157, 159, 187);
           }  
