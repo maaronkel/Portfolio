@@ -1,12 +1,12 @@
 @import 'partials/reset', 'partials/variables', 'partials/mixins';
 
-// Container fot index.html - footer visible on scroll
+// Container fot index.html - with the footer visible on scroll
 .container--home {
   height: 100vh;
   @include container
 }
 
-// Container for every other page
+// Container for every other page, footer inside container
 .container {
   height: auto;
   @include container
@@ -57,33 +57,31 @@
     position: fixed;
     top: 12px;
 		right: 15px;
-		background-image: radial-gradient(
-      $header-footer-bg--color__light,
-			rgb(82, 82, 117)
-		);
+    background-color: $header-footer-bg--color__light;
 		z-index: 1000;
-		transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+		transition: transform 1.3s cubic-bezier(0.86, 0, 0.07, 1);
 	}
 	&__nav {
-		height: 100vh;
+		width: 0;
 		position: fixed;
 		top: 0;
 		right: 0;
 		z-index: 1500;
 		opacity: 0;
-		width: 0;
-		transition: all 0.8s ease;
-    // transition: all 0.8s cubic-bezier(0, -0.55, 0.265, 1.25);
-    transition: all 0.8s cubic-bezier(0.3, -0.3, 0.2, 1.55);
+    height: 100%;
+    transition: all 0.8s cubic-bezier(4.3, 0.1, 0.1, 6.95);
+    transition-delay: 0.5s;
+    // transition: all 1.1s cubic-bezier(0.72, 0, 0.3, 1.23);
     margin-top: 3rem;
 	}
 	&__list {
 		list-style: none;
-		text-align: left;
+		text-align: center;
     width: 100%;
 	}
 	&__item {
-    margin: 4.5rem 4.5rem 4.5rem 3rem;
+    // margin: 4.5rem 4.5rem 4.5rem 3rem;
+    margin: 4.5rem;
 	}
 	&__link {
 		&:link,

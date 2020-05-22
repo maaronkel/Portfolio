@@ -45,10 +45,7 @@ body.dark-theme {
   }
 
   .navigation__background {
-		background-image: radial-gradient(
-      $header-footer-bg--color__dark,
-			#252a37
-		);
+		background-color: $header-footer-bg--color__dark;
   }
 
   .contact__social--logos a {
