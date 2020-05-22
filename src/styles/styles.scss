@@ -326,22 +326,18 @@ body {
   align-items: center;
   justify-content: center;
   height: auto;
-  margin-top: 14rem;
+  margin-top: 17rem;
   p {
     font-size: 1.4rem;
     color: rgb(100, 106, 128);
     margin-bottom: 1rem;
   }
   &__arrow {
-    span {
-      color: rgb(111, 119, 145);
-      font-size: 5rem;
-      // margin-top: 1rem;
-      // margin-bottom: 9rem;
-      &:hover {
-        color: rgb(54, 57, 63);
-      } 
-    }
+    font-size: 4rem;
+    color: rgb(111, 119, 145);
+    &:hover {
+      color: rgb(54, 57, 63);
+    } 
   }
 }
 
@@ -353,7 +349,8 @@ body {
   .title {
     // override title positioning for contact page
     position: absolute;
-    top: 7.6rem;
+    // top: 7.6rem;
+    top: 12rem;
   }
   h1 {
     color: rgb(55, 63, 83);
@@ -585,7 +582,7 @@ body.dark-theme {
   }
 
   span,
-  .scroll__arrow span,
+  .scroll__arrow,
   .scroll p {
     color: rgb(140, 140, 165);
   }

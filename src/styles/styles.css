@@ -295,7 +295,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: auto;
-  margin-top: 14rem;
+  margin-top: 17rem;
 }
 
 .scroll p {
@@ -304,12 +304,12 @@ body {
   margin-bottom: 1rem;
 }
 
-.scroll__arrow span {
+.scroll__arrow {
+  font-size: 4rem;
   color: #6f7791;
-  font-size: 5rem;
 }
 
-.scroll__arrow span:hover {
+.scroll__arrow:hover {
   color: #36393f;
 }
 
@@ -320,7 +320,7 @@ body {
 
 .contact .title {
   position: absolute;
-  top: 7.6rem;
+  top: 12rem;
 }
 
 .contact h1 {
@@ -595,7 +595,7 @@ body.dark-theme .about__container--heading {
 }
 
 body.dark-theme span,
-body.dark-theme .scroll__arrow span,
+body.dark-theme .scroll__arrow,
 body.dark-theme .scroll p {
   color: #8c8ca5;
 }
