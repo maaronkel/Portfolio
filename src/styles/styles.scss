@@ -1,140 +1,52 @@
-// RESET * and html
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import 'partials/reset', 'partials/variables', 'partials/mixins';
 
-html {
-  font-size: 62.5%; // make 1rem == 10px rather than 16px
-  font-family: 'Open Sans', sans-serif;
-}
-
-body {
-  transition: all ease-in-out 0.3s;
-}
-
-// CONTAINER index.html, footer visible on scroll
+// Container fot index.html - footer visible on scroll
 .container--home {
   height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  display: grid;
-  grid-template-rows: 40vh 1fr 4.6rem;
-  grid-template-areas: 
-  "header"
-  "content"
-  "footer";
+  @include container
 }
 
-// CONTAINER for the content on every other page
+// Container for every other page
 .container {
   height: auto;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  display: grid;
-  grid-template-rows: 40vh 1fr 4.6rem;
-  grid-template-areas: 
-  "header"
-  "content"
-  "footer";
+  @include container
 }
 
-// HEADER
+// Header
 .header {
-  background-color: rgb(16, 19, 26);
+  background-color: $header-footer-bg--color__light;
   height: 40vh;
   width: 100vw;
   position: relative;
   grid-area: header;
   &__menu {
-    background-color: rgb(16, 19, 26);
+    background-color: $header-footer-bg--color__light;
     position: fixed;
     width: 100vw;
     height: 6rem;
-    // height: 7.1rem;
     z-index: 30;
   }
 }
 
-// LIGHT / DARK TOGGLE
-.toggle {
-  position: absolute;
-  // top: 2.4rem;
-  top: 18px;
-  // top: 3.5rem;
-  right: 70px;
-  // left: 3rem;
-  label {
-    // background-color: #dfdfdf;
-    // border: 2px solid #bbbbbb;
-    // background-color: #141518;
-    // border: 2px solid #141518;
-    background-color: rgb(27, 31, 41);
-    border: 2px solid rgb(36, 40, 51);
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: all ease-in-out 0.3s;
-    width: 5.4rem;
-    height: 2.4rem;
-    // margin: 18px 15px 5px -70px;
-
-    &::after {
-      // background-color: #ffffff;
-      // background-color: #e47e7e;
-      background-color: #ffc375;
-      border-radius: 50%;
-      content: ' ';
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      transition: all ease-in-out 0.3s;
-      left: 0.1rem;
-      width: 20px;
-      height: 20px;
-    }
-  }
-  input[type='checkbox'] {
-    display: none;
-  }
-  // Changes background colors of the toggle in dark-mode
-  // input[type='checkbox']:checked ~ label {
-  //   background-color: #141518;
-  //   border-color: #0f1013;
-  //   background-color: #131622;
-  //   border-color: #141518;
-  // }
-  input[type='checkbox']:checked ~ label::after {
-    // background-color: #1e1e25;
-    background-color: #7788d4;
-    transform: translateX(28px);
-  }
+// Default Header Title Style
+.header__title {
+  @include header__title
 }
 
-// NAVMENU
+// Navbar
 .navigation {
 	&__checkbox {
 		display: none;
 	}
 	&__button {
-    background-color: rgb(16, 19, 26);
+    background-color: $header-footer-bg--color__light;
 		height: 5rem;
 		width: 5rem;
 		position: fixed;
-		// top: 2rem;
-    // right: 2rem;
     right: 10px;
 		top: 5px;
-		// top: 1rem;
     border-radius: 50%;
 		z-index: 2000;
-		// box-shadow: 0 1rem 3rem rgba(black, 0.6);
 		text-align: center;
 		cursor: pointer;
 	}
@@ -143,12 +55,10 @@ body {
 		width: 4rem;
 		border-radius: 50%;
     position: fixed;
-    // top: 2.5rem;
-    // top: 1.8rem;
     top: 12px;
 		right: 15px;
 		background-image: radial-gradient(
-      rgb(16, 19, 26),
+      $header-footer-bg--color__light,
 			rgb(82, 82, 117)
 		);
 		z-index: 1000;
@@ -183,16 +93,8 @@ body {
       font-weight: 300;
       letter-spacing: 0.1rem;
 			padding: 1rem 2rem;
-			color: rgb(238, 239, 255);
+			color: $header-title-main--color__light;
 			text-decoration: none;
-			// text-transform: uppercase;
-			// background-image: linear-gradient(
-			// 	120deg,
-			// 	transparent 0%,
-			// 	transparent 49.9%,
-			// 	rgb(73, 78, 100) 50%
-			// );
-			// background-size: 220%;
       transition: all 0.4s ease;
     }
     &--home {
@@ -206,15 +108,13 @@ body {
 		&:hover,
 		&:active {
 			background-position: 100%;
-			color: rgb(255, 160, 36);
+			color: $navbar-active-link--color__light;
 			transform: translateX(0.5rem);
 		}
   }
 	// Functionality
 	&__checkbox:checked ~ &__background {
     transform: scale(80);
-    // overflow-y: hidden;
-    // position: fixed;
 	}
 	&__checkbox:checked ~ &__nav {
 		opacity: 1;
@@ -231,7 +131,7 @@ body {
 			width: 2rem;
       height: 3px;
       border-radius: 10px;
-			background-color: rgb(238, 239, 255);
+			background-color: $header-title-main--color__light;
 			display: inline-block;
 		}
 		&::before,
@@ -248,14 +148,6 @@ body {
 			top: 0.8rem;
 		}
   }
-  // Seperate 3 bars on hover
-	// &__button:hover &__icon::before {
-	// 	top: -1rem;
-	// }
-	// &__button:hover &__icon::after {
-	// 	top: 1rem;
-  // }
-  // rotate menu button to close button
 	&__checkbox:checked + &__button &__icon {
 		background-color: transparent;
 		transition: all 0.1s ease;
@@ -270,56 +162,70 @@ body {
 	}
 }
 
-// NAVMENU ACTIVE PAGE COLOR
+// Changes the color of the active page in the Navbar
 .active--link {
   &:link,
   &:visited {
-    color: rgb(255, 147, 59);
+    color: $navbar-active-link--color__light;
   }
 }
 
-// DEFAULT TITLE STYLES
-.title {
-  position: absolute;
-  bottom: 2rem;
-  left: 2.3rem;
-  width: 80%;
-  color: rgb(242, 243, 255);
-  &__main {
-    font-size: 4.2rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    // line-height: 8rem;
-  }
-  &__sub {
-    font-size: 1.6rem;
-    letter-spacing: 0.1rem;
-    color: rgb(178, 178, 189);
-    line-height: 2.6rem;
-  }
-}
-
-// index.html LINK
+// Home Navbar Link
 .home {
   position: absolute;
   top: 1.9rem;
-  // top: 2.4rem;
-  // top: 3.5rem;
-  // right: 9rem;
   left: 2.4rem;
   a {
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 700;
-    color: white;
+    color: #ffffff;
+    transition: all ease-in-out 0.3s;
     &:hover {
-      color: rgb(199, 208, 226);
+      color: $navbar-link--color__hover;
     }
   }
 }
 
-// HOMEPAGE SCROLL ICON
-.scroll {
+// Light / Dark Toggle
+.toggle {
+  position: absolute;
+  top: 18px;
+  right: 70px;
+  label {
+    background-color: $toggle-bg--color;
+    border: 2px solid $toggle-bg--border--color;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    width: 5.4rem;
+    height: 2.4rem;
+    &::after {
+      background-color: $toggle-btn--color__light;
+      border-radius: 50%;
+      content: ' ';
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      transition: all ease-in-out 0.3s;
+      left: 0.1rem;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  input[type='checkbox'] {
+    display: none;
+  }
+  input[type='checkbox']:checked ~ label::after {
+    background-color: $toggle-btn--color__dark;
+    transform: translateX(28px);
+  }
+}
+
+// Homepage Arrow
+.arrow {
   grid-area: content;
   display: flex;
   flex-direction: column;
@@ -327,85 +233,76 @@ body {
   justify-content: center;
   height: auto;
   margin-top: 17rem;
-  p {
-    font-size: 1.4rem;
-    color: rgb(100, 106, 128);
-    margin-bottom: 1rem;
-  }
-  &__arrow {
+  // p {
+  //   font-size: 1.4rem;
+  //   color: #646a80;
+  //   margin-bottom: 1rem;
+  // }
+  &__btn {
     font-size: 4rem;
-    color: rgb(111, 119, 145);
+    color: #6f7791;
     &:hover {
-      color: rgb(54, 57, 63);
+      color: #36393f;
     } 
   }
 }
 
-// CONTACT
+// Contact
 .contact {
-  // background-color: rgb(20, 20, 20);
   height: 100vh;
   position: relative;
-  .title {
-    // override title positioning for contact page
+  .header__title {
+    // override header__title, --main, --sub
     position: absolute;
-    // top: 7.6rem;
     top: 12rem;
-  }
-  h1 {
-    color: rgb(55, 63, 83);
-  }
-  &__info {
-    margin: 4rem 0 0 0;
-    // override .title__sub class color
-    span {
-      color: rgb(22, 25, 32);
+    &--main {
+      color: #373f53;
+      margin-bottom: 4rem;
+    }
+    &--sub {
+      // margin: 4rem 0 0 0;
+      color: #161920;
     }
   }
   &__social {
     &--logos {
       margin-top: 3rem;
-      &--icon {
-        // color: rgb(43, 49, 65);
-        color: rgb(22, 25, 32);
+      a {
+        color: #161920;
         font-size: 4rem;
         margin: 0 1rem 0 0;
         transition: all ease-in-out 0.3s;
-        &:hover {
-          color: rgb(255, 166, 64);
-        }
-      }
-      a {
         text-decoration: none;
-        // content: ' ';
+        &:hover {
+          color: $navbar-active-link--color__light;
+        }
       }
     }
   }
   &__email {
+    margin-top: 2.4rem;
     a {
       font-size: 1.6rem;
       font-weight: 700;
-      // text-decoration: none;
-      color: rgb(0, 0, 0);
+      color: #000000;
       transition: all ease-in-out 0.3s;
       text-underline-position: under;
       text-decoration: underline;
       &:hover {
-        color: rgb(255, 166, 64);
+        color: $navbar-active-link--color__light;
       }
     }
   }  
 }
 
-// ABOUT
+// About
 .about {
   grid-area: content;
   margin: 3rem;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   &__container {
     display: grid;
     gap: 16px;
-    // grid-auto-rows: auto;
     &--heading {
       font-size: 1.4rem;
       font-weight: 600;
@@ -417,37 +314,26 @@ body {
   }
 }
 
-// BLOG
+// Blog
 .blog {
   grid-area: content;
   display: grid;
   gap: 3rem;
-  // grid-template-columns: 1fr;
-  // grid-template-areas: 
-  // "post";
-  // height: 100%;
   margin: 2.4rem;
   a {
     text-decoration: none;
-    border-bottom: 1px solid rgb(186, 186, 206);
-    color: rgb(22, 25, 32);
-    padding-bottom: 2.2rem;
+    border-bottom: 1px solid #babace;
+    color: $text--color__darker;
+    padding-bottom: 2.3rem;
     .blog__item {
       display: grid;
-      // grid-template-columns: repeat(3, 1fr);
-      // grid-template-rows: repeat(6, auto);
       grid-auto-rows: minmax(20px, auto);
-      &:last-of-type {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
       img {
         width: 100%;
-        margin: 0 0 3rem 0;
+        margin: 0 0 2.4rem 0;
       }
       h2 {
         font-size: 1.8rem;
-        // text-decoration: underline;
         letter-spacing: 1px;
         margin-bottom: 1rem;
       }
@@ -459,20 +345,19 @@ body {
         margin-bottom: 1rem;
       }
     }
+    &:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
   }
 }
 
-// PROJECTS
+// Projects
 .projects {
   grid-area: content;
   display: grid;
   gap: 3rem;
-  grid-template-columns: 1fr;
-  // grid-template-areas: 
-  // "project";
-  // height: 100%;
   margin: 2.4rem;
-  // overflow-y: scroll;
   &__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -480,13 +365,12 @@ body {
     "title title"
     "info info"
     "image github";
-    background-color: rgb(237, 242, 250);
+    background-color: $project-bg--color__light;
     border-radius: 2px;
-    padding: 1rem 0 1rem 1rem;
+    padding: 2rem 0 2rem 2rem;
     h2 {
       grid-area: title;
       font-size: 1.8rem;
-      // text-decoration: underline;
       letter-spacing: 1px;
       margin-bottom: 1rem;
     }
@@ -503,35 +387,33 @@ body {
     a {
       grid-area: github;
       text-decoration: none;
-      color: white;
-      background-color: rgb(35, 37, 44);
+      color: #ffffff;
+      background-color: $project-gh-bg--color__light;
       font-size: 1.2rem;
-      // border: 2px solid rgb(35, 37, 44);
       border-radius: 4px;
       padding: 1rem 1rem 1rem 1rem;
-      // width: 100%;
       height: 40px;
       display: flex;
       align-items: center;
       align-self: center;
       justify-self: center;
       cursor: pointer;
+      transition: all ease-in-out 0.3s;
       ion-icon {
         font-size: 2rem;
         margin-right: 10px;
       }
       &:hover {
-        color: rgb(255, 153, 20);
+        color: $text--color__hover;
       }
     }
   }
 }
 
-// FOOTER
+// Footer
 .footer {
   grid-area: footer;
-  // background-color: rgb(27, 31, 41); (16, 19, 26)
-  background-color: rgb(16, 19, 26);
+  background-color: $header-footer-bg--color__light;
   height: 46px;
   width: 100vw;
   display: flex;
@@ -547,22 +429,23 @@ body {
     &--item {
       a {
       text-decoration: none;
-      color: rgb(190, 191, 206);
+      color: $footer-text--color;
       padding: 1rem 0 1rem 0;
       margin: 0 1rem 0 1rem;
       font-size: 1.2em;
       font-weight: 400;
       letter-spacing: 1px;
+      transition: all ease-in-out 0.3s;
         &:hover {
-          color: rgb(241, 241, 255);
+          color: $footer-text--color__hover;
         }
       }
       &:last-child {
         a {
-        color: rgb(132, 132, 158);
-        // color: rgb(118, 119, 141);
+        color: $footer-text--color__last-item;
+        transition: all ease-in-out 0.3s;
           &:hover {
-            color: rgb(157, 159, 187);
+            color: $footer-text--color--last-item__hover;
           }  
         }      
       }
@@ -570,82 +453,5 @@ body {
   }
 }
 
-// DARK THEME
-body.dark-theme {
-	background: #141518;
-
-  h1,
-  h2,
-  h3,
-  .about__container--heading {
-    color: rgb(228, 228, 228);
-  }
-
-  span,
-  .scroll__arrow,
-  .scroll p {
-    color: rgb(140, 140, 165);
-  }
-
-  .about__container--text,
-  p {
-    color: rgb(202, 203, 207);
-  }
-
-  .projects__item {
-    background-color: #202227;
-  }
-
-  .projects__item a {
-    background-color: #30343d;
-  }
-
-  .header,
-  .header__menu,
-  .footer,
-  .navigation__button {
-    background-color: rgb(0, 0, 0);
-  }
-
-  .contact__social {
-    &--logos {
-      &--icon {
-        color: rgb(124, 124, 145);
-      }
-    }
-  }
-  
-  .contact__email {
-    a {
-      color: rgb(228, 228, 228);
-    }
-  } 
-  
-  // .navigation__icon {
-	// 	&,
-	// 	&::before,
-	// 	&::after {
-	// 		background-color: #7788d4;
-	// 	}
-  // }
-
-  .navigation__background {
-		background-image: radial-gradient(
-      rgb(0, 0, 0),
-			rgb(36, 41, 54)
-		);
-  }
-
-  .navigation__link {
-    &:hover,
-		&:active {
-			color: rgb(119, 136, 212);
-    }
-  }
-
-  .blog {
-    a {
-      border-bottom: 1px solid rgb(70, 70, 82);
-    }
-  }
-}
+// Dark Theme - import last so it overrides all the styles above when enabled
+@import 'partials/dark-theme'

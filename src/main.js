@@ -1,6 +1,6 @@
 // Smooth Scroll effect - https://github.com/cferdinandi/smooth-scroll
-var scroll = new SmoothScroll('.scroll a[href*="#"]', {
-  speed: 1200
+var scroll = new SmoothScroll('.arrow a[href*="#"]', {
+  speed: 1100
 });
 
 // Light / Dark toggle - https://www.florin-pop.com/blog/2019/05/dark-light-theme-toggle/

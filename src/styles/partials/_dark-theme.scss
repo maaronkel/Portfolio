@@ -1,0 +1,80 @@
+@import 'variables';
+
+body.dark-theme {
+  background: $bg--color__dark;
+  
+  .header,
+  .header__menu,
+  .footer,
+  .navigation__button {
+    background-color: $header-footer-bg--color__dark;
+  }
+
+  .header__title--main {
+    color: $header-title-main--color__dark;
+  }
+
+  .about__container--heading,
+  .blog__item h2,
+  .projects__item h2 {
+    color: $header-title-sub--color__light;
+  }
+  
+  .header__title--sub,
+  .arrow__btn,
+  .about__container--text,
+  .blog__item p,
+  .projects__item p {
+    color: $text--color__light;
+  }
+
+  .blog__item span {
+    color: $text--color__dark;
+  }
+
+  .arrow__btn,
+  .contact__info span,
+  .contact__social--logos a {
+    color: $text--color__tert;
+  }
+
+  .navigation__link:hover,
+  .active--link:link,
+  .active--link:visited {
+    color: $toggle-btn--color__dark;
+  }
+
+  .navigation__background {
+		background-image: radial-gradient(
+      $header-footer-bg--color__dark,
+			#252a37
+		);
+  }
+
+  .contact__social--logos a {
+    &:hover {
+      color: $toggle-btn--color__dark;
+    }
+  }
+
+  .contact__email a {
+    color: rgb(228, 228, 228);
+    &:hover {
+      color: $toggle-btn--color__dark;
+    }
+  }
+
+  .blog a {
+    border-bottom-color: rgb(46, 46, 54);
+  }
+
+  .projects__item {
+    background-color: $project-bg--color__dark;
+    a {
+      background-color: $project-gh-bg--color__dark;
+      &:hover {
+        color: $toggle-btn--color__dark;
+      }
+    }
+  }
+}
