@@ -43,6 +43,10 @@
     bottom: 4rem;
   }
 
+  .about {
+    margin: 4rem 20rem;
+  }
+
   .home {
     display: none;
   }
@@ -188,8 +192,9 @@
   }
 
   .about {
+    margin: 4rem 32rem;
     &__container {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 4rem;
     }
   }
@@ -236,10 +241,17 @@
 
 // Desktop 
 @media (min-width: 1620px) {
-  .about,
   .blog,
   .projects {
     margin: 4rem 28rem;
+  }
+
+  .about {
+    margin: 4rem 44rem;
+    font-size: 1.6rem;
+    &__container {
+      grid-template-columns: 1fr;
+    }
   }
 
   .blog {
@@ -301,10 +313,13 @@
 
 // Desktop Normal
 @media (min-width: 1920px) {
-  .about,
   .blog,
   .projects {
     margin: 4rem 36rem;
+  }
+
+  .about {
+    margin: 4rem 56rem;
   }
 
   .blog {
@@ -322,14 +337,14 @@
             max-height: 400px;
           }
           h2 {
-            margin-left: 0;
+            margin-left: 2rem;
           }
           p {
-            margin-left: 0;
+            margin-left: 2rem;
             width: 85%;
           }
           span {
-            margin-left: 0;
+            margin-left: 2rem;
           }
         }
       }
@@ -374,7 +389,6 @@
 
 // Desktop Large
 @media (min-width: 2140px) {
-  .about,
   .blog,
   .projects {
     margin: 4rem 56rem;
@@ -390,5 +404,9 @@
 
   .toggle {
     right: 560px;
+  }
+
+  .about {
+    margin: 4rem 68rem;
   }
 }
