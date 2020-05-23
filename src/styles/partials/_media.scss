@@ -13,17 +13,21 @@
 
   .projects__item {
     grid-template-areas: 
-    "title github"
+    "image title"
+    "image github"
     "image info";
+    h2 {
+      font-size: 2.2rem;
+      display: flex;
+      align-self: flex-end;
+      justify-self: center;
+    }
     p {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0;
       padding: 2rem 4rem;
-    }
-    a {
-      margin-bottom: -70px;
     }
     img {
       margin-top: auto;
@@ -149,6 +153,18 @@
     margin: 4rem 8rem;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+    &__item {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "image"
+      "title"
+      "github"
+      "info";
+      padding: 2rem;
+      h2 {
+        margin-top: 2rem;
+      }
+    }
   }
 }
 // Tablet Large
@@ -316,6 +332,29 @@
             margin-left: 0;
           }
         }
+      }
+    }
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    &__item {
+      padding: 4rem;
+      grid-template-areas: 
+      "image title"
+      "image github"
+      "image info";
+      img {
+        min-width: 620px;
+        justify-self: center;
+        display: flex;
+      }
+      h2 {
+        font-size: 3.2rem;
+      }
+      p {
+        display: flex;
+        justify-self: center;
       }
     }
   }

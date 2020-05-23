@@ -582,7 +582,16 @@ body {
         grid-template-columns: 1fr 1fr;
   }
   .projects__item {
-        grid-template-areas: "title github" "image info";
+        grid-template-areas: "image title" "image github" "image info";
+  }
+  .projects__item h2 {
+    font-size: 2.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    justify-self: center;
   }
   .projects__item p {
     display: -webkit-box;
@@ -596,9 +605,6 @@ body {
             justify-content: center;
     margin: 0;
     padding: 2rem 4rem;
-  }
-  .projects__item a {
-    margin-bottom: -70px;
   }
   .projects__item img {
     margin-top: auto;
@@ -691,15 +697,13 @@ body {
   }
   .blog__item--1 a img {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: image;
     margin: 0;
   }
   .blog__item--1 a h2 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 4;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: title;
     font-size: 4.2rem;
     margin: 2rem 0 0 1rem;
@@ -734,6 +738,15 @@ body {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 4rem;
+  }
+  .projects__item {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "image" "title" "github" "info";
+    padding: 2rem;
+  }
+  .projects__item h2 {
+    margin-top: 2rem;
   }
 }
 
@@ -880,6 +893,30 @@ body {
   }
   .blog__item--1 a span {
     margin-left: 0;
+  }
+  .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .projects__item {
+    padding: 4rem;
+        grid-template-areas: "image title" "image github" "image info";
+  }
+  .projects__item img {
+    min-width: 620px;
+    justify-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .projects__item h2 {
+    font-size: 3.2rem;
+  }
+  .projects__item p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: center;
   }
   .header__title {
     left: 36rem;
