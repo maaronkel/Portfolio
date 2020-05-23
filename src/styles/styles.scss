@@ -1,4 +1,4 @@
-@import 'partials/reset', 'partials/variables', 'partials/mixins', 'partials/media';
+@import 'partials/reset', 'partials/variables', 'partials/mixins';
 
 // Container fot index.html - with the footer visible on scroll
 .container--home {
@@ -80,7 +80,6 @@
     width: 100%;
 	}
 	&__item {
-    // margin: 4.5rem 4.5rem 4.5rem 3rem;
     margin: 4.5rem;
 	}
 	&__link {
@@ -95,20 +94,18 @@
 			text-decoration: none;
       transition: all 0.4s ease;
     }
+    &:hover,
+		&:active {
+      color: $toggle-btn--color__light;
+		}
     &--home {
       &:link,
 		  &:visited {
-      text-underline-position: under;
-      text-decoration: underline;
-      font-weight: 400;
-		  }
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
     }
-		&:hover,
-		&:active {
-			background-position: 100%;
-			color: $navbar-active-link--color__light;
-			transform: translateX(0.5rem);
-		}
   }
 	// Functionality
 	&__checkbox:checked ~ &__background {
@@ -164,7 +161,7 @@
 .active--link {
   &:link,
   &:visited {
-    color: $navbar-active-link--color__light;
+    color: $toggle-btn--color__light;
   }
 }
 
@@ -173,15 +170,13 @@
   position: absolute;
   top: 1.9rem;
   left: 2.4rem;
+  margin-right: 20rem;
   a {
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 700;
     color: #ffffff;
     transition: all ease-in-out 0.3s;
-    &:hover {
-      color: $navbar-link--color__hover;
-    }
   }
 }
 
@@ -424,6 +419,7 @@
   flex-direction: row;
   justify-content: space-around;  
   align-items: center;
+  margin-right: 0.6rem;
     &--item {
       a {
       text-decoration: none;
@@ -451,5 +447,5 @@
   }
 }
 
-// Dark Theme - import last so it overrides all the styles above when enabled
-@import 'partials/dark-theme'
+// Dark Theme, Media Queries - imported last so it overrides all the styles above when enabled
+@import 'partials/media', 'partials/dark-theme';

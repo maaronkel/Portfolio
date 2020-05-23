@@ -143,17 +143,14 @@ body {
   transition: all 0.4s ease;
 }
 
-.navigation__link--home:link, .navigation__link--home:visited {
-  text-underline-position: under;
-  text-decoration: underline;
-  font-weight: 400;
+.navigation__link:hover, .navigation__link:active {
+  color: #ffc375;
 }
 
-.navigation__link:hover, .navigation__link:active {
-  background-position: 100%;
-  color: #ff933b;
-  -webkit-transform: translateX(0.5rem);
-          transform: translateX(0.5rem);
+.navigation__link--home:link, .navigation__link--home:visited {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -214,13 +211,14 @@ body {
 }
 
 .active--link:link, .active--link:visited {
-  color: #ff933b;
+  color: #ffc375;
 }
 
 .home {
   position: absolute;
   top: 1.9rem;
   left: 2.4rem;
+  margin-right: 20rem;
 }
 
 .home a {
@@ -230,10 +228,6 @@ body {
   color: #ffffff;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
-}
-
-.home a:hover {
-  color: #c7d0e2;
 }
 
 .toggle {
@@ -552,6 +546,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 0.6rem;
 }
 
 .footer__list--item a {
@@ -578,6 +573,67 @@ body {
 
 .footer__list--item:last-child a:hover {
   color: #9d9fbb;
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    left: 4rem;
+    bottom: 4rem;
+  }
+  .home {
+    display: none;
+  }
+  .navigation__button, .navigation__background, .navigation__icon {
+    display: none;
+  }
+  .navigation__nav {
+    opacity: 1;
+    width: 80%;
+    left: 0;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 0;
+  }
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 2rem;
+  }
+  .navigation__item {
+    margin: 0.8rem 0 0 0;
+  }
+  .navigation__link:link, .navigation__link:visited {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin: 1rem 2rem;
+    padding: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .navigation__link--home:link, .navigation__link--home:visited {
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  .navigation__link--home:hover {
+    color: #ffc375;
+  }
+  .toggle {
+    right: 44px;
+  }
 }
 
 body.dark-theme {

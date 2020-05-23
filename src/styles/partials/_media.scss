@@ -1,1 +1,64 @@
-// Medai Queries
+// Media Queries
+
+// Tablet Small
+@media (min-width: 768px) {
+  .header__title {
+    left: 4rem;
+    bottom: 4rem;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .navigation {
+    &__button,
+    &__background,
+    &__icon {
+      display: none;
+    }
+    &__nav {
+      opacity: 1;
+      width: 80%;
+      left: 0;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+    }
+    &__list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 2rem;
+    }
+    &__item {
+      margin: 0.8rem 0 0 0;
+    }
+    &__link {
+		  &:link,
+		  &:visited {
+			  font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        margin: 1rem 2rem;
+        padding: 0;
+        transition: all 0.4s ease;
+      }
+      &--home {
+        &:link,
+		    &:visited {
+          font-weight: 700;
+          font-size: 1.6rem;
+        }
+        &:hover {
+          color: $toggle-btn--color__light;
+        }
+      }
+    }
+  }
+
+  .toggle {
+    right: 44px;
+  }
+}
