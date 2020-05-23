@@ -1,0 +1,31 @@
+@import 'variables';
+
+// Default styles for the Header main and sub titles
+@mixin header__title {
+  position: absolute;
+  bottom: 2rem;
+  left: 2.3rem;
+  width: 80%;
+  color: $header-title-main--color__light;
+  &--main {
+    font-size: 4.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+  }
+  &--sub {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    color: $header-title-sub--color--light;
+    line-height: 2.6rem;
+  }
+}
+
+// Default styles for the layout of each page
+@mixin container {
+  display: grid;
+  grid-template-rows: 40vh 1fr 4.6rem;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer";
+}
