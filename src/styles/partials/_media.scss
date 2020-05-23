@@ -1,6 +1,33 @@
 // Media Queries
 
 // Tablet Small
+@media (min-width: 568px) {
+  .blog {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects__item {
+    grid-template-areas: 
+    "title github"
+    "image info";
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 2rem 4rem;
+    }
+    a {
+      margin-bottom: -70px;
+    }
+    img {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+// Tablet Medium
 @media (min-width: 768px) {
   .header__title {
     left: 4rem;
@@ -30,10 +57,10 @@
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
-      margin-left: 2rem;
+      margin-left: 4rem;
     }
     &__item {
-      margin: 0.8rem 0 0 0;
+      margin: 0.8rem 2rem 0 0;
     }
     &__link {
 		  &:link,
@@ -55,10 +82,126 @@
           color: $toggle-btn--color__light;
         }
       }
+      &:first-of-type {
+        margin-left: 0;
+      }
     }
   }
 
   .toggle {
     right: 44px;
+  }
+
+  .about {
+    margin: 4rem;
+  }
+
+  .blog {
+    margin: 4rem;
+    gap: 4rem;
+  }
+
+  // .projects {
+  //   margin: 4rem;
+  //   grid-template-columns: 1fr 1fr;
+  //   gap: 4rem;
+  // }
+}
+// Tablet Large
+@media (min-width: 1024px) {
+.about,
+.blog,
+.projects {
+    margin: 4rem 16rem;
+  }
+
+  .header__title {
+    left: 16rem;
+  }
+
+  .navigation__list {
+    margin-left: 16rem;
+  }
+
+  .toggle {
+    right: 160px;
+  }
+}
+
+// Desktop 
+@media (min-width: 1620px) {
+  .about,
+  .blog,
+  .projects {
+    margin: 4rem 28rem;
+  }
+
+  .header__title {
+    left: 28rem;
+  }
+
+  .navigation__list {
+    margin-left: 28rem;
+  }
+
+  .toggle {
+    right: 280px;
+  }
+
+  .navigation {
+    &__nav {
+      width: 50%;
+    }
+  }
+}
+
+// Desktop Normal
+@media (min-width: 1920px) {
+  .about,
+  .blog,
+  .projects {
+    margin: 4rem 36rem;
+  }
+
+  .header__title {
+    left: 36rem;
+  }
+
+  .navigation__list {
+    margin-left: 36rem;
+  }
+
+  .toggle {
+    right: 360px;
+  }
+
+  .navigation {
+    &__link {
+		  &:link,
+		  &:visited {
+			  font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+// Desktop Large
+@media (min-width: 2140px) {
+  .about,
+  .blog,
+  .projects {
+    margin: 4rem 56rem;
+  }
+
+  .header__title {
+    left: 56rem;
+  }
+
+  .navigation__list {
+    margin-left: 56rem;
+  }
+
+  .toggle {
+    right: 560px;
   }
 }

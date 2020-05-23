@@ -423,11 +423,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.blog a:last-of-type {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
 .projects {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -575,6 +570,36 @@ body {
   color: #9d9fbb;
 }
 
+@media (min-width: 568px) {
+  .blog {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .projects__item {
+        grid-template-areas: "title github" "image info";
+  }
+  .projects__item p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 2rem 4rem;
+  }
+  .projects__item a {
+    margin-bottom: -70px;
+  }
+  .projects__item img {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
 @media (min-width: 768px) {
   .header__title {
     left: 4rem;
@@ -610,10 +635,10 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-left: 2rem;
+    margin-left: 4rem;
   }
   .navigation__item {
-    margin: 0.8rem 0 0 0;
+    margin: 0.8rem 2rem 0 0;
   }
   .navigation__link:link, .navigation__link:visited {
     font-size: 1.6rem;
@@ -631,8 +656,92 @@ body {
   .navigation__link--home:hover {
     color: #ffc375;
   }
+  .navigation__link:first-of-type {
+    margin-left: 0;
+  }
   .toggle {
     right: 44px;
+  }
+  .about {
+    margin: 4rem;
+  }
+  .blog {
+    margin: 4rem;
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about,
+  .blog,
+  .projects {
+    margin: 4rem 16rem;
+  }
+  .header__title {
+    left: 16rem;
+  }
+  .navigation__list {
+    margin-left: 16rem;
+  }
+  .toggle {
+    right: 160px;
+  }
+}
+
+@media (min-width: 1620px) {
+  .about,
+  .blog,
+  .projects {
+    margin: 4rem 28rem;
+  }
+  .header__title {
+    left: 28rem;
+  }
+  .navigation__list {
+    margin-left: 28rem;
+  }
+  .toggle {
+    right: 280px;
+  }
+  .navigation__nav {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about,
+  .blog,
+  .projects {
+    margin: 4rem 36rem;
+  }
+  .header__title {
+    left: 36rem;
+  }
+  .navigation__list {
+    margin-left: 36rem;
+  }
+  .toggle {
+    right: 360px;
+  }
+  .navigation__link:link, .navigation__link:visited {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 2140px) {
+  .about,
+  .blog,
+  .projects {
+    margin: 4rem 56rem;
+  }
+  .header__title {
+    left: 56rem;
+  }
+  .navigation__list {
+    margin-left: 56rem;
+  }
+  .toggle {
+    right: 560px;
   }
 }
 
