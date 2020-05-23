@@ -293,12 +293,18 @@
   grid-area: content;
   margin: 3rem;
   // overflow-y: scroll;
+
   &__container {
     display: grid;
-    gap: 16px;
+    gap: 2rem;
+    grid-template-areas: 
+    "p"
+    "title"
+    "image";
     &--heading {
-      font-size: 1.4rem;
+      font-size: 2.2rem;
       font-weight: 600;
+      margin: 1rem 0;
     }
     &--text {
       font-size: 1.6rem;
@@ -313,14 +319,13 @@
   display: grid;
   gap: 3rem;
   margin: 2.4rem;
-  a {
-    text-decoration: none;
-    border-bottom: 1px solid #babace;
-    color: $text--color__darker;
-    padding-bottom: 2.3rem;
-    .blog__item {
-      display: grid;
-      grid-auto-rows: minmax(20px, auto);
+  &__item { 
+    display: grid;
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid #babace;
+      color: $text--color__darker;
+      padding-bottom: 2.3rem;
       img {
         width: 100%;
         margin: 0 0 2.4rem 0;
@@ -338,10 +343,6 @@
         margin-bottom: 1rem;
       }
     }
-    // &:last-of-type {
-    //   border-bottom: none;
-    //   padding-bottom: 0;
-    // }
   }
 }
 
@@ -419,7 +420,7 @@
   flex-direction: row;
   justify-content: space-around;  
   align-items: center;
-  margin-right: 0.6rem;
+  margin-right: 1.2rem;
     &--item {
       a {
       text-decoration: none;
