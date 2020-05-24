@@ -1,1 +1,449 @@
-// Medai Queries
+// Media Queries
+
+// Tablet Small
+@media (min-width: 568px) {
+  .about {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  
+  .blog {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    &__item {
+      h2 {
+        font-size: 2.2rem;
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-start;
+      }
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+// Tablet Medium
+@media (min-width: 768px) {
+  .header__title {
+    left: 8rem;
+    bottom: 4rem;
+  }
+
+  .about {
+    margin: 4rem 20rem;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .navigation {
+    &__button,
+    &__background,
+    &__icon {
+      display: none;
+    }
+    &__nav {
+      opacity: 1;
+      width: 80%;
+      left: 0;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+    }
+    &__list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 8rem;
+    }
+    &__item {
+      margin: 0.8rem 2rem 0 0;
+    }
+    &__link {
+		  &:link,
+		  &:visited {
+			  font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        margin: 1rem 2rem;
+        padding: 0;
+        transition: all 0.4s ease;
+      }
+      &--home {
+        &:link,
+		    &:visited {
+          font-weight: 700;
+          font-size: 1.6rem;
+        }
+        &:hover {
+          color: $toggle-btn--color__light;
+        }
+      }
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .toggle {
+    right: 82px;
+  }
+
+  .blog {
+    margin: 4rem 8rem;
+    gap: 4rem;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "main main"
+    "second second"
+    "third third";
+    &__item {
+      a {
+        padding-bottom: 4rem;
+      }
+      &--1 {
+        grid-area: main;
+        a {
+          display: grid;
+          gap: 2rem;
+          grid-template-areas: 
+          "image image image title"
+          "image image image text"
+          "image image image date";
+          img {
+            grid-area: image;
+            margin: 0;
+          }
+          h2 {
+            grid-area: title;
+            font-size: 4.2rem;
+            margin: 2rem 0 0 1rem;
+            display: flex;
+            align-items: flex-end;
+          }
+          p {
+            grid-area: text;
+            margin-bottom: 0;
+            display: flex;
+            align-items: flex-start;
+            margin-left: 1rem;
+          }
+          span {
+            grid-area: date;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .projects {
+    margin: 4rem 8rem;
+    gap: 4rem;
+  }
+}
+// Tablet Large
+@media (min-width: 1024px) {
+.about,
+.blog,
+.projects {
+    margin: 4rem 16rem;
+  }
+
+  .header__title {
+    left: 16rem;
+  }
+
+  .navigation__list {
+    margin-left: 16rem;
+  }
+
+  .toggle {
+    right: 160px;
+  }
+
+  .about {
+    margin: 4rem 32rem;
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .blog {
+    &__item {
+      a {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+      &--1 {
+        a {
+          display: grid;
+          gap: 2rem;
+          grid-template-areas: 
+          "image image image title"
+          "image image image text"
+          "image image image date";
+          img {
+            min-width: 540px;
+          }
+          h2 {
+            grid-area: title;
+            font-size: 4.2rem;
+            margin: 2rem 0 0 0;
+            display: flex;
+            align-items: flex-end;
+          }
+          p {
+            grid-area: text;
+            margin-bottom: 0;
+            display: flex;
+            align-items: flex-start;
+          }
+          span {
+            grid-area: date;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop 
+@media (min-width: 1620px) {
+  .blog,
+  .projects {
+    margin: 4rem 28rem;
+  }
+
+  .about {
+    margin: 4rem 44rem;
+    font-size: 1.6rem;
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .blog {
+    grid-template-columns: 1fr 1fr;
+    &__item {
+      &--1 {
+        a {
+          grid-template-areas: 
+          "image image title"
+          "image image text"
+          "image image date";
+          img {
+            max-width: 600px;
+            display: flex;
+            align-self: center;
+          }
+          h2 {
+            margin-left: 1rem;
+          }
+          p {
+            margin-left: 1rem;
+            width: 85%;
+          }
+          span {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .header__title {
+    left: 28rem;
+  }
+
+  .navigation__list {
+    margin-left: 28rem;
+  }
+
+  .toggle {
+    right: 280px;
+  }
+
+  .navigation {
+    &__nav {
+      width: 50%;
+    }
+    &__link {
+		  &:link,
+		  &:visited {
+			  font-size: 1.4rem;
+      }
+    }
+    &__item {
+      margin-top: 1.1rem;
+    }
+  }
+}
+
+// Desktop Normal
+@media (min-width: 1920px) {
+  .blog,
+  .projects {
+    margin: 4rem 36rem;
+  }
+
+  .about {
+    margin: 4rem 56rem;
+  }
+
+  .blog {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "main main main"
+    "second second second"
+    "third third third";
+    &__item {
+      &--1 {
+        a {
+          grid-template-columns: 1fr 1fr 1fr;
+          img {
+            max-width: 800px;
+            max-height: 400px;
+          }
+          h2 {
+            margin-left: 2rem;
+          }
+          p {
+            margin-left: 2rem;
+            width: 85%;
+          }
+          span {
+            margin-left: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    &__item {
+      padding-bottom: 0;
+      grid-template-areas: 
+      "image title"
+      "image info"
+      "image github";
+      img {
+        min-width: 620px;
+        justify-self: center;
+        display: flex;
+      }
+      h2 {
+        font-size: 3.2rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-bottom: 0;
+      }
+      p {
+        display: flex;
+        justify-self: flex-start;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-bottom: 0;
+        height: 60%;
+      }
+      a {
+        margin-left: 4rem;
+      }
+    }
+  }
+
+  .header__title {
+    left: 36rem;
+  }
+
+  .navigation__list {
+    margin-left: 36rem;
+  }
+
+  .toggle {
+    right: 360px;
+  }
+}
+
+// Desktop Large
+@media (min-width: 2140px) {
+  .blog,
+  .projects {
+    margin: 4rem 56rem;
+  }
+
+  .header__title {
+    left: 56rem;
+  }
+
+  .navigation__list {
+    margin-left: 56rem;
+  }
+
+  .toggle {
+    right: 560px;
+  }
+
+  .about {
+    margin: 4rem 68rem;
+  }
+
+  .projects__item {
+    img {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  .about {
+    margin: 8rem 76rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    &__item {
+      grid-template-areas: 
+      "image"
+      "title"
+      "info"
+      "github";
+      img {
+        min-width: 100%;
+      }
+      h2 {
+        margin-left: 2rem;
+      }
+      p {
+        margin: 2rem 2rem 0 2rem;
+      }
+      a {
+        margin: 2rem;
+      }
+    }
+  }
+
+  .blog {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    gap: 8rem;
+    a {
+      padding-bottom: 8rem;
+    }
+  }
+}

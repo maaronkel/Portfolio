@@ -1,4 +1,4 @@
-@import 'partials/reset', 'partials/variables', 'partials/mixins', 'partials/media';
+@import 'partials/reset', 'partials/variables', 'partials/mixins';
 
 // Container fot index.html - with the footer visible on scroll
 .container--home {
@@ -56,7 +56,7 @@
 		border-radius: 50%;
     position: fixed;
     top: 12px;
-		right: 15px;
+		right: 12px;
     background-color: $header-footer-bg--color__light;
 		z-index: 1000;
 		transition: transform 1.3s cubic-bezier(0.86, 0, 0.07, 1);
@@ -80,7 +80,6 @@
     width: 100%;
 	}
 	&__item {
-    // margin: 4.5rem 4.5rem 4.5rem 3rem;
     margin: 4.5rem;
 	}
 	&__link {
@@ -95,20 +94,18 @@
 			text-decoration: none;
       transition: all 0.4s ease;
     }
+    &:hover,
+		&:active {
+      color: $toggle-btn--color__light;
+		}
     &--home {
       &:link,
 		  &:visited {
-      text-underline-position: under;
-      text-decoration: underline;
-      font-weight: 400;
-		  }
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
     }
-		&:hover,
-		&:active {
-			background-position: 100%;
-			color: $navbar-active-link--color__light;
-			transform: translateX(0.5rem);
-		}
   }
 	// Functionality
 	&__checkbox:checked ~ &__background {
@@ -164,7 +161,7 @@
 .active--link {
   &:link,
   &:visited {
-    color: $navbar-active-link--color__light;
+    color: $toggle-btn--color__light;
   }
 }
 
@@ -173,15 +170,13 @@
   position: absolute;
   top: 1.9rem;
   left: 2.4rem;
+  margin-right: 20rem;
   a {
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 700;
     color: #ffffff;
     transition: all ease-in-out 0.3s;
-    &:hover {
-      color: $navbar-link--color__hover;
-    }
   }
 }
 
@@ -222,7 +217,7 @@
   }
 }
 
-// Homepage Arrow
+// Homepage Scroll Down Arrow
 .arrow {
   grid-area: content;
   display: flex;
@@ -230,18 +225,34 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  margin-top: 17rem;
-  // p {
-  //   font-size: 1.4rem;
-  //   color: #646a80;
-  //   margin-bottom: 1rem;
-  // }
+  margin-top: 16rem;
   &__btn {
     font-size: 4rem;
     color: #6f7791;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scrolldown;
     &:hover {
       color: #36393f;
     } 
+  }
+}
+
+// Homepage Scroll Down Arrow Animation
+@keyframes scrolldown {
+  0% {
+    opacity: 0;
+    transform: translate(0, -8px)
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 8px);
   }
 }
 
@@ -297,13 +308,17 @@
 .about {
   grid-area: content;
   margin: 3rem;
-  // overflow-y: scroll;
   &__container {
     display: grid;
-    gap: 16px;
+    gap: 2rem;
+    grid-template-areas: 
+    "p"
+    "title"
+    "image";
     &--heading {
-      font-size: 1.4rem;
+      font-size: 2.2rem;
       font-weight: 600;
+      margin: 1rem 0 2rem 0;
     }
     &--text {
       font-size: 1.6rem;
@@ -318,14 +333,13 @@
   display: grid;
   gap: 3rem;
   margin: 2.4rem;
-  a {
-    text-decoration: none;
-    border-bottom: 1px solid #babace;
-    color: $text--color__darker;
-    padding-bottom: 2.3rem;
-    .blog__item {
-      display: grid;
-      grid-auto-rows: minmax(20px, auto);
+  &__item { 
+    display: grid;
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid #babace;
+      color: $text--color__darker;
+      padding-bottom: 2.3rem;
       img {
         width: 100%;
         margin: 0 0 2.4rem 0;
@@ -343,10 +357,6 @@
         margin-bottom: 1rem;
       }
     }
-    &:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
   }
 }
 
@@ -358,25 +368,26 @@
   margin: 2.4rem;
   &__item {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "title title"
-    "info info"
-    "image github";
+    "image"
+    "title"
+    "info"
+    "github";
     background-color: $project-bg--color__light;
     border-radius: 2px;
-    padding: 2rem 0 2rem 2rem;
+    padding: 0 0 2rem 0;
     h2 {
       grid-area: title;
       font-size: 1.8rem;
       letter-spacing: 1px;
-      margin-bottom: 1rem;
+      margin: 2rem;
     }
     p {
       grid-area: info;
       font-size: 1.6rem;
       margin-bottom: 2rem;
-      padding-right: 1rem;
+      margin: 0 2rem 2rem 2rem;
     }
     img {
       grid-area: image;
@@ -390,11 +401,12 @@
       font-size: 1.2rem;
       border-radius: 4px;
       padding: 1rem 1rem 1rem 1rem;
+      margin-left: 2rem;
       height: 40px;
       display: flex;
       align-items: center;
       align-self: center;
-      justify-self: center;
+      justify-self: flex-start;
       cursor: pointer;
       transition: all ease-in-out 0.3s;
       ion-icon {
@@ -424,6 +436,7 @@
   flex-direction: row;
   justify-content: space-around;  
   align-items: center;
+  margin-right: 1.2rem;
     &--item {
       a {
       text-decoration: none;
@@ -431,7 +444,8 @@
       padding: 1rem 0 1rem 0;
       margin: 0 1rem 0 1rem;
       font-size: 1.2em;
-      font-weight: 400;
+      // font-weight: 400;
+      font-weight: 600;
       letter-spacing: 1px;
       transition: all ease-in-out 0.3s;
         &:hover {
@@ -451,5 +465,5 @@
   }
 }
 
-// Dark Theme - import last so it overrides all the styles above when enabled
-@import 'partials/dark-theme'
+// Dark Theme, Media Queries - imported last so it overrides all the styles above when enabled
+@import 'partials/media', 'partials/dark-theme';
