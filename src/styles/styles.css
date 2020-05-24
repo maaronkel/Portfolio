@@ -84,7 +84,7 @@ body {
   height: 5rem;
   width: 5rem;
   position: fixed;
-  right: 4px;
+  right: 10px;
   top: 5px;
   border-radius: 50%;
   z-index: 2000;
@@ -98,7 +98,7 @@ body {
   border-radius: 50%;
   position: fixed;
   top: 12px;
-  right: 8px;
+  right: 12px;
   background-color: #10131a;
   z-index: 1000;
   -webkit-transition: -webkit-transform 1.3s cubic-bezier(0.86, 0, 0.07, 1);
