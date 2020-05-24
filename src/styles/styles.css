@@ -161,9 +161,12 @@ body {
 }
 
 .navigation__link--home:link, .navigation__link--home:visited {
+  text-decoration: none;
+  letter-spacing: 0rem;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #ffffff;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -241,6 +244,10 @@ body {
   color: #ffffff;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+}
+
+.home a:hover, .home a:active {
+  color: #ffc375;
 }
 
 .toggle {
@@ -759,14 +766,18 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
-    margin: 1rem 2rem;
+    margin: 1.1rem 2rem;
     padding: 0;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
   }
   .navigation__link--home:link, .navigation__link--home:visited {
-    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0rem;
     font-size: 1.6rem;
+    font-weight: 700;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
   }
   .navigation__link--home:hover {
     color: #ffc375;
@@ -965,7 +976,7 @@ body {
     font-size: 1.4rem;
   }
   .navigation__item {
-    margin-top: 1.1rem;
+    margin-top: 1rem;
   }
 }
 
