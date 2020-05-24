@@ -347,25 +347,26 @@
   margin: 2.4rem;
   &__item {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "title title"
-    "info info"
-    "image github";
+    "image"
+    "title"
+    "info"
+    "github";
     background-color: $project-bg--color__light;
     border-radius: 2px;
-    padding: 2rem 0 2rem 2rem;
+    padding: 0 0 2rem 0;
     h2 {
       grid-area: title;
       font-size: 1.8rem;
       letter-spacing: 1px;
-      margin-bottom: 1rem;
+      margin: 2rem;
     }
     p {
       grid-area: info;
       font-size: 1.6rem;
       margin-bottom: 2rem;
-      padding-right: 1rem;
+      margin: 0 2rem 2rem 2rem;
     }
     img {
       grid-area: image;
@@ -379,11 +380,12 @@
       font-size: 1.2rem;
       border-radius: 4px;
       padding: 1rem 1rem 1rem 1rem;
+      margin-left: 2rem;
       height: 40px;
       display: flex;
       align-items: center;
       align-self: center;
-      justify-self: center;
+      justify-self: flex-start;
       cursor: pointer;
       transition: all ease-in-out 0.3s;
       ion-icon {

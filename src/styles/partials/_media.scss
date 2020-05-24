@@ -11,27 +11,20 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .projects__item {
-    grid-template-areas: 
-    "image title"
-    "image github"
-    "image info";
-    h2 {
-      font-size: 2.2rem;
-      display: flex;
-      align-self: flex-end;
-      justify-self: center;
-    }
-    p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      padding: 2rem 4rem;
-    }
-    img {
-      margin-top: auto;
-      margin-bottom: auto;
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    &__item {
+      h2 {
+        font-size: 2.2rem;
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-start;
+      }
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
     }
   }
 }
@@ -155,20 +148,7 @@
 
   .projects {
     margin: 4rem 8rem;
-    grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    &__item {
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-      "image"
-      "title"
-      "github"
-      "info";
-      padding: 2rem;
-      h2 {
-        margin-top: 2rem;
-      }
-    }
   }
 }
 // Tablet Large
@@ -354,11 +334,11 @@
   .projects {
     grid-template-columns: 1fr;
     &__item {
-      padding: 4rem;
+      padding-bottom: 0;
       grid-template-areas: 
       "image title"
-      "image github"
-      "image info";
+      "image info"
+      "image github";
       img {
         min-width: 620px;
         justify-self: center;
@@ -366,10 +346,20 @@
       }
       h2 {
         font-size: 3.2rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-bottom: 0;
       }
       p {
         display: flex;
-        justify-self: center;
+        justify-self: flex-start;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-bottom: 0;
+        height: 60%;
+      }
+      a {
+        margin-left: 4rem;
       }
     }
   }
@@ -408,5 +398,52 @@
 
   .about {
     margin: 4rem 68rem;
+  }
+
+  .projects__item {
+    img {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  .about {
+    margin: 8rem 76rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    &__item {
+      grid-template-areas: 
+      "image"
+      "title"
+      "info"
+      "github";
+      img {
+        min-width: 100%;
+      }
+      h2 {
+        margin-left: 2rem;
+      }
+      p {
+        margin: 2rem 2rem 0 2rem;
+      }
+      a {
+        margin: 2rem;
+      }
+    }
+  }
+
+  .blog {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    gap: 8rem;
+    a {
+      padding-bottom: 8rem;
+    }
   }
 }
