@@ -231,7 +231,7 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  margin-top: 16rem;
+  margin-top: 12rem;
   &__btn {
     font-size: 4rem;
     color: #6f7791;
@@ -313,7 +313,7 @@
 // About
 .about {
   grid-area: content;
-  margin: 3rem;
+  margin: 2.4rem 3rem 2.4rem 3rem;
   &__container {
     display: grid;
     gap: 2rem;
@@ -426,12 +426,11 @@
       grid-area: title;
       font-size: 1.8rem;
       letter-spacing: 1px;
-      margin: 2rem;
+      margin: 2rem 2rem 1rem 2rem;
     }
     p {
       grid-area: info;
       font-size: 1.6rem;
-      margin-bottom: 2rem;
       margin: 0 2rem 2rem 2rem;
     }
     img {
