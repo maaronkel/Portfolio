@@ -359,13 +359,16 @@
     }
   }
   &__post {
-  &--image {
+    &--image {
       width: 100%;
     }
-    &--title,
-    &--date {
+    &--title {
       margin: 0 auto;
     } 
+    &--date {
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -378,8 +381,9 @@
     a {
       color: #b2b2bd;
       text-decoration: none;
+      transition: all 0.4s ease;
       &:hover {
-        color: #fff;
+        color: $toggle-btn--color__light;
         text-decoration: underline;
       }
     }
@@ -448,20 +452,18 @@
         margin-right: 10px;
       }
       &:hover {
-        color: $text--color__hover;
+        color: $toggle-btn--color__light;
       }
     }
   }
 }
 
+// Resume Page
 .resume {
-  // margin: 0;
-  // padding: 0;
   width: 100%;
   height: 100vh;
   background-image: url(../images/resume.png);
   background-position: center;
-  
 }
 
 // Footer

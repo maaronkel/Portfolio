@@ -79,10 +79,12 @@ body {
   text-underline-position: under;
   text-decoration: underline;
   color: white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .header__title--sub a:hover {
-  color: #ff933b;
+  color: #ffc375;
 }
 
 .navigation__checkbox {
@@ -481,8 +483,13 @@ body {
   width: 100%;
 }
 
-.blog__post--title, .blog__post--date {
+.blog__post--title {
   margin: 0 auto;
+}
+
+.blog__post--date {
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
 
 .breadcrumb {
@@ -497,10 +504,12 @@ body {
 .breadcrumb li a {
   color: #b2b2bd;
   text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .breadcrumb li a:hover {
-  color: #fff;
+  color: #ffc375;
   text-decoration: underline;
 }
 
@@ -592,7 +601,7 @@ body {
 }
 
 .projects__item a:hover {
-  color: #ffa640;
+  color: #ffc375;
 }
 
 .resume {
