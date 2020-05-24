@@ -349,20 +349,20 @@
       }
       h2 {
         font-size: 3.2rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
         margin-bottom: 0;
       }
       p {
         display: flex;
         justify-self: flex-start;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
         margin-bottom: 0;
         height: 60%;
       }
       a {
-        margin-left: 4rem;
+        margin-left: 2rem;
       }
     }
   }
@@ -410,6 +410,7 @@
   }
 }
 
+// Desktop Larger
 @media (min-width: 2400px) {
   .about {
     margin: 8rem 76rem;
@@ -430,13 +431,13 @@
         min-width: 100%;
       }
       h2 {
-        margin-left: 2rem;
+        margin-left: 0;
       }
       p {
-        margin: 2rem 2rem 0 2rem;
+        margin: 2rem 2rem 0 0;
       }
       a {
-        margin: 2rem;
+        margin: 2rem 0 2rem 0;
       }
     }
   }

@@ -421,17 +421,17 @@
     "github";
     background-color: $project-bg--color__light;
     border-radius: 2px;
-    padding: 0 0 2rem 0;
+    padding: 2rem;
     h2 {
       grid-area: title;
       font-size: 1.8rem;
       letter-spacing: 1px;
-      margin: 2rem 2rem 1rem 2rem;
+      margin: 2rem 2rem 1rem 0;
     }
     p {
       grid-area: info;
       font-size: 1.6rem;
-      margin: 0 2rem 2rem 2rem;
+      margin: 0 2rem 2rem 0;
     }
     img {
       grid-area: image;
@@ -445,7 +445,7 @@
       font-size: 1.2rem;
       border-radius: 4px;
       padding: 1rem 1rem 1rem 1rem;
-      margin-left: 2rem;
+      margin-left: 0;
       height: 40px;
       display: flex;
       align-items: center;

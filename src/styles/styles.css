@@ -549,7 +549,7 @@ body {
       grid-template-areas: "image" "title" "info" "github";
   background-color: #edf2fa;
   border-radius: 2px;
-  padding: 0 0 2rem 0;
+  padding: 2rem;
 }
 
 .projects__item h2 {
@@ -558,7 +558,7 @@ body {
   grid-area: title;
   font-size: 1.8rem;
   letter-spacing: 1px;
-  margin: 2rem 2rem 1rem 2rem;
+  margin: 2rem 2rem 1rem 0;
 }
 
 .projects__item p {
@@ -566,7 +566,7 @@ body {
   -ms-grid-column: 1;
   grid-area: info;
   font-size: 1.6rem;
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 2rem 2rem 0;
 }
 
 .projects__item img {
@@ -586,7 +586,7 @@ body {
   font-size: 1.2rem;
   border-radius: 4px;
   padding: 1rem 1rem 1rem 1rem;
-  margin-left: 2rem;
+  margin-left: 0;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1027,8 +1027,8 @@ body {
   }
   .projects__item h2 {
     font-size: 3.2rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-bottom: 0;
   }
   .projects__item p {
@@ -1036,13 +1036,13 @@ body {
     display: -ms-flexbox;
     display: flex;
     justify-self: flex-start;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-bottom: 0;
     height: 60%;
   }
   .projects__item a {
-    margin-left: 4rem;
+    margin-left: 2rem;
   }
   .header__title {
     left: 36rem;
@@ -1095,13 +1095,13 @@ body {
     min-width: 100%;
   }
   .projects__item h2 {
-    margin-left: 2rem;
+    margin-left: 0;
   }
   .projects__item p {
-    margin: 2rem 2rem 0 2rem;
+    margin: 2rem 2rem 0 0;
   }
   .projects__item a {
-    margin: 2rem;
+    margin: 2rem 0 2rem 0;
   }
   .blog {
     margin-top: 8rem;
