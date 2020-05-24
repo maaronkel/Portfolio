@@ -28,7 +28,8 @@ body.dark-theme {
     color: $text--color__light;
   }
 
-  .blog__item span {
+  .blog__item span,
+  .blog__post--date {
     color: $text--color__dark;
   }
 
