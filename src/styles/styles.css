@@ -292,16 +292,58 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: auto;
-  margin-top: 17rem;
+  margin-top: 16rem;
 }
 
 .arrow__btn {
   font-size: 4rem;
   color: #6f7791;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scrolldown;
+          animation-name: scrolldown;
 }
 
 .arrow__btn:hover {
   color: #36393f;
+}
+
+@-webkit-keyframes scrolldown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -8px);
+            transform: translate(0, -8px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 8px);
+            transform: translate(0, 8px);
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -8px);
+            transform: translate(0, -8px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 8px);
+            transform: translate(0, 8px);
+  }
 }
 
 .contact {

@@ -217,7 +217,7 @@
   }
 }
 
-// Homepage Arrow
+// Homepage Scroll Down Arrow
 .arrow {
   grid-area: content;
   display: flex;
@@ -225,13 +225,34 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  margin-top: 17rem;
+  margin-top: 16rem;
   &__btn {
     font-size: 4rem;
     color: #6f7791;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scrolldown;
     &:hover {
       color: #36393f;
     } 
+  }
+}
+
+// Homepage Scroll Down Arrow Animation
+@keyframes scrolldown {
+  0% {
+    opacity: 0;
+    transform: translate(0, -8px)
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 8px);
   }
 }
 
