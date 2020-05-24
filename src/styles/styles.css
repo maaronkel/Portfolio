@@ -481,6 +481,7 @@ body {
 
 .blog__post--image {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .blog__post--title {
