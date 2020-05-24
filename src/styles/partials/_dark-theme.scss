@@ -39,6 +39,7 @@ body.dark-theme {
     color: $text--color__tert;
   }
 
+  .header__title--sub a:hover,
   .navigation__link:hover,
   .active--link:link,
   .active--link:visited {

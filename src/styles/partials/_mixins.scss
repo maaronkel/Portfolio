@@ -17,6 +17,14 @@
     letter-spacing: 0.1rem;
     color: $header-title-sub--color--light;
     line-height: 2.6rem;
+    a {
+      text-underline-position: under;
+      text-decoration: underline;
+      color: white;
+      &:hover {
+        color: $navbar-active-link--color__light;
+      }
+    }
   }
 }
 
