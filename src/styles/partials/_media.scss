@@ -234,6 +234,9 @@
     font-size: 1.6rem;
     &__container {
       grid-template-columns: 1fr;
+      &--text {
+        font-size: 2rem;
+      }
     }
   }
 
