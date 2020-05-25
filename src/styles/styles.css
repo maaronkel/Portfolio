@@ -656,7 +656,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 1.2rem;
+  margin-right: 0.8rem;
 }
 
 .footer__list--item a {
