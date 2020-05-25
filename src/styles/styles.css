@@ -317,16 +317,12 @@ body {
 .arrow__btn {
   font-size: 4rem;
   color: #6f7791;
+  -webkit-animation-name: scrolldown;
+          animation-name: scrolldown;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-name: scrolldown;
-          animation-name: scrolldown;
-}
-
-.arrow__btn:hover {
-  color: #36393f;
 }
 
 @-webkit-keyframes scrolldown {
@@ -363,6 +359,10 @@ body {
     -webkit-transform: translate(0, 8px);
             transform: translate(0, 8px);
   }
+}
+
+.arrow__btn:hover {
+  color: #36393f;
 }
 
 .contact {
